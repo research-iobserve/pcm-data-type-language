@@ -1,0 +1,156 @@
+grammar org.spp.cocome.types.Types with org.eclipse.xtext.common.Terminals
+
+generate types "http://www.spp.org/cocome/types/Types"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+/*
+ * see http://www.oiloftrop.de/tag/type-systems/ for details on the
+ * approach used to declare this language and type system
+ */
+
+Model:
+	'package' name=QualifiedName
+	(imports += Import)*
+	(types+=ComplexType)*
+;
+
+Import:
+	'import' importedNamespace = QualifiedNameWithWildcard
+;
+
+/* definition of the type system */
+Type:
+	NamedType | CollectionType | MapType
+;
+
+/* collection of named types */
+NamedType:
+	ComplexType | PrimitiveType
+;
+
+/* single dimensional collection type, no size results in an unbound collection */
+CollectionType:
+	reference=TypeReference '[' (size=INT)? ']'
+;
+
+MapType:
+	reference=TypeReference '<' (mapType=TypeReference '>')  '[' (size=INT)? ']'	
+;
+
+DeclarationTypeReference:
+	TypeReference | CollectionType | MapType
+;
+
+/* reference to a type */
+TypeReference:
+	reference=[NamedType|ID] 
+;
+
+/* helper rule to describe primitive types */
+PrimitiveType:
+	name=ID
+;
+
+ComplexType:
+	EnumerationType | EntityType
+;
+
+EnumerationType:
+    'enum' name = ID (':' parent=[EnumerationType|QualifiedName])? 
+    '{' literals += EnumerationLiteral (',' literals += EnumerationLiteral)* '}'
+;
+
+EnumerationLiteral:
+    name = ID
+;
+
+/**
+ * The central entity type.
+ */
+EntityType:
+	'entity' (storageModifier=TypeStorageModifier)? name=ID (':' parent=[ComplexType|QualifiedName])? '{'
+		(properties+=Property)*
+	'}'
+;
+
+enum TypeStorageModifier:
+	STORABLE = ' storable' |  // The entity type will be mapped to a table.
+	EMBEDDABLE = 'embeddable' // The properties of the entity type will be embedded in another entity table. This only makes sense for one to one relationships.
+;
+
+/**
+ * A unique property with UniquePropertyOption::mappedBy uses a foreign property. 
+ */
+Property:
+	(storageModifier=PropertyStorageModifier)?
+	type=DeclarationTypeReference name=ID 
+	(relationship=EntityRelationship)?
+	('order' orderBy=PropertyReference)? // @OrderBy
+	('key' mapKey=PropertyReference)? // @MapKey
+	('=' literal=Literal)?
+;
+
+/**
+ * Specifying mappedBy indicates a back references.
+ */
+EntityRelationship: {EntityRelationship}
+	kind=EntityRelationshipKind (mappedBy=MappedByReference)?
+;
+
+enum EntityRelationshipKind: 
+	UNIQUE = 'unique' |
+	MANY = 'many'
+;
+
+MappedByReference:
+	base=[Property|ID] ('.' path=MappedByReference)?
+;
+
+enum PropertyStorageModifier:
+	VARIABLE = 'var' | // The property can be changed any time, this option is the default.
+	VALUE = 'val' | // The property can only be set once. It implies transient, as it is realized with 'final'
+	TRANSIENT = 'transient' // The property shall not be stored in the database.
+;
+
+Literal:
+	BooleanLiteral | NumberLiteral | CharLiteral | StringLiteral | PropertyReference
+;
+
+StringLiteral:
+	value=STRING
+;
+
+CharLiteral:
+	value=CHARACTER
+;
+
+NumberLiteral:
+	value=NUMBER
+;
+
+BooleanLiteral:
+	value=BOOLEAN
+;
+
+PropertyReference:
+	reference=[Property|ID]
+;
+
+/*
+ * special rules
+ */
+QualifiedName: ID('.'ID)*;
+
+QualifiedNameWithWildcard:
+	QualifiedName ('.' '*')?
+;
+
+BOOLEAN returns ecore::EBoolean:
+	'true'|'false'
+;
+
+NUMBER: ('+'|'-')?INT|(INT'.'INT);
+
+terminal CHARACTER: "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") ) "'";
+

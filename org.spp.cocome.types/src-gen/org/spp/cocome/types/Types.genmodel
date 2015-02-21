@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.spp.cocome.types/src-gen" editDirectory="/org.spp.cocome.types.edit/src"
+    editorDirectory="/org.spp.cocome.types.editor/src" modelPluginID="org.spp.cocome.types"
+    forceOverwrite="true" modelName="Types" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.spp.cocome.types.edit"
+    editorPluginID="org.spp.cocome.types.editor" runtimeVersion="2.9">
+  <genPackages prefix="Types" basePackage="org.spp.cocome.types" disposableProviderFactory="true"
+      fileExtensions="types" ecorePackage="Types.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Types.ecore#//TypeStorageModifier">
+      <genEnumLiterals ecoreEnumLiteral="Types.ecore#//TypeStorageModifier/STORABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="Types.ecore#//TypeStorageModifier/EMBEDDABLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Types.ecore#//EntityRelationshipKind">
+      <genEnumLiterals ecoreEnumLiteral="Types.ecore#//EntityRelationshipKind/UNIQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Types.ecore#//EntityRelationshipKind/MANY"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Types.ecore#//PropertyStorageModifier">
+      <genEnumLiterals ecoreEnumLiteral="Types.ecore#//PropertyStorageModifier/VARIABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="Types.ecore#//PropertyStorageModifier/VALUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Types.ecore#//PropertyStorageModifier/TRANSIENT"/>
+    </genEnums>
+    <genClasses ecoreClass="Types.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//Model/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//Model/types"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//Import/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//Type"/>
+    <genClasses ecoreClass="Types.ecore#//NamedType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//NamedType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//CollectionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//CollectionType/reference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//CollectionType/size"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//MapType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//MapType/reference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//MapType/mapType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//MapType/size"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//DeclarationTypeReference"/>
+    <genClasses ecoreClass="Types.ecore#//TypeReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Types.ecore#//TypeReference/reference"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//PrimitiveType"/>
+    <genClasses ecoreClass="Types.ecore#//ComplexType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Types.ecore#//ComplexType/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//EnumerationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//EnumerationType/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//EnumerationLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//EnumerationLiteral/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//EntityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//EntityType/storageModifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//EntityType/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//Property/storageModifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//Property/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//Property/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//Property/relationship"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//Property/orderBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//Property/mapKey"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//Property/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//EntityRelationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//EntityRelationship/kind"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//EntityRelationship/mappedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//MappedByReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Types.ecore#//MappedByReference/base"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Types.ecore#//MappedByReference/path"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//Literal"/>
+    <genClasses ecoreClass="Types.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//StringLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//CharLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//CharLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//NumberLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//NumberLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//BooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Types.ecore#//BooleanLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Types.ecore#//PropertyReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Types.ecore#//PropertyReference/reference"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
