@@ -53,15 +53,14 @@ import org.spp.cocome.types.types.TypeStorageModifier;
  */
 @SuppressWarnings("all")
 public class TypesGenerator implements IGenerator {
+  @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterator<EntityType> _filter = Iterators.<EntityType>filter(_allContents, EntityType.class);
-    final Procedure1<EntityType> _function = new Procedure1<EntityType>() {
-      public void apply(final EntityType e) {
-        String _createFileName = TypesGenerator.this.createFileName(e);
-        CharSequence _createEntity = TypesGenerator.this.createEntity(e);
-        fsa.generateFile(_createFileName, _createEntity);
-      }
+    final Procedure1<EntityType> _function = (EntityType e) -> {
+      String _createFileName = this.createFileName(e);
+      CharSequence _createEntity = this.createEntity(e);
+      fsa.generateFile(_createFileName, _createEntity);
     };
     IteratorExtensions.<EntityType>forEach(_filter, _function);
   }
@@ -96,10 +95,8 @@ public class TypesGenerator implements IGenerator {
     _builder.newLine();
     EObject _eContainer_1 = type.eContainer();
     EList<Import> _imports = ((Model) _eContainer_1).getImports();
-    final Function1<Import, CharSequence> _function = new Function1<Import, CharSequence>() {
-      public CharSequence apply(final Import i) {
-        return TypesGenerator.this.createImport(i);
-      }
+    final Function1<Import, CharSequence> _function = (Import i) -> {
+      return this.createImport(i);
     };
     List<CharSequence> _map = ListExtensions.<Import, CharSequence>map(_imports, _function);
     String _join = IterableExtensions.join(_map);
@@ -127,11 +124,9 @@ public class TypesGenerator implements IGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     EList<Property> _properties = type.getProperties();
-    final Function1<Property, CharSequence> _function_1 = new Function1<Property, CharSequence>() {
-      public CharSequence apply(final Property p) {
-        TypeStorageModifier _storageModifier = type.getStorageModifier();
-        return TypesGenerator.this.createProperty(p, _storageModifier);
-      }
+    final Function1<Property, CharSequence> _function_1 = (Property p) -> {
+      TypeStorageModifier _storageModifier_2 = type.getStorageModifier();
+      return this.createProperty(p, _storageModifier_2);
     };
     List<CharSequence> _map_1 = ListExtensions.<Property, CharSequence>map(_properties, _function_1);
     String _join_1 = IterableExtensions.join(_map_1);
@@ -141,10 +136,8 @@ public class TypesGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("\t");
     EList<Property> _properties_1 = type.getProperties();
-    final Function1<Property, CharSequence> _function_2 = new Function1<Property, CharSequence>() {
-      public CharSequence apply(final Property p) {
-        return TypesGenerator.this.createGettersAndSetters(p);
-      }
+    final Function1<Property, CharSequence> _function_2 = (Property p) -> {
+      return this.createGettersAndSetters(p);
     };
     List<CharSequence> _map_2 = ListExtensions.<Property, CharSequence>map(_properties_1, _function_2);
     String _join_2 = IterableExtensions.join(_map_2);
