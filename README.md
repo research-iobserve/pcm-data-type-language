@@ -4,7 +4,7 @@ Data type modeling language for the Palldio Component Model
 The data type languages allows to model data types for Java entity beans
 providing an abstraction which is close to EMF and UML class diagrams.
 
-Fratures:
+Features:
  * The language uses Java like imports and package declarations, but allows
    to define more than one entity per file.
  * Support for enumerations and entity types.
