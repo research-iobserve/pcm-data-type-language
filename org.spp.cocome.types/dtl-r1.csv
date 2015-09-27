@@ -1,0 +1,8 @@
+org.spp.cocome.types;size of observed system;1.0
+org.spp.cocome.types;number of modules;13.0
+org.spp.cocome.types;number of nodes;43.0
+org.spp.cocome.types;number of edges;79.0
+org.spp.cocome.types;hypergraph size;221.99005178410235
+org.spp.cocome.types;hypergraph complexity;475.40458775355535
+org.spp.cocome.types;inter module coupling;352.1009373897661
+org.spp.cocome.types;graph cohesion;0.04684276150315019
