@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <hypergraph:ModularHypergraph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hypergraph="http://evaluation.se.cs.cau.de/hypergraph">
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.doGenerate" edges="//@edges.0 //@edges.1 //@edges.2 //@edges.3">
+  <nodes name="org.spp.cocome.types.generator.TypesGenerator.doGenerate" edges="//@edges.0 //@edges.1 //@edges.2 //@edges.3 //@edges.4 //@edges.5">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createFileName" edges="//@edges.4">
+  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createFileName" edges="//@edges.2">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createEntity" edges="//@edges.5 //@edges.6 //@edges.7 //@edges.8 //@edges.9 //@edges.10 //@edges.11 //@edges.12 //@edges.13 //@edges.14 //@edges.15 //@edges.16 //@edges.17 //@edges.18 //@edges.19">
+  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createEntity" edges="//@edges.3 //@edges.6 //@edges.7 //@edges.8 //@edges.9 //@edges.10 //@edges.11 //@edges.12 //@edges.13 //@edges.14 //@edges.15 //@edges.16 //@edges.17 //@edges.18 //@edges.19">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
   <nodes name="org.spp.cocome.types.generator.TypesGenerator.createClassAnnotation" edges="//@edges.15">
@@ -15,10 +15,10 @@
   <nodes name="org.spp.cocome.types.generator.TypesGenerator.createImports" edges="//@edges.11">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createGettersAndSetters" edges="//@edges.20 //@edges.21 //@edges.22 //@edges.23 //@edges.24 //@edges.25 //@edges.26">
+  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createGettersAndSetters" edges="//@edges.19 //@edges.20 //@edges.21 //@edges.22 //@edges.23 //@edges.24 //@edges.25 //@edges.26">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createProperty" edges="//@edges.27 //@edges.28 //@edges.29 //@edges.30">
+  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createProperty" edges="//@edges.17 //@edges.27 //@edges.28 //@edges.29 //@edges.30">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
   <nodes name="org.spp.cocome.types.generator.TypesGenerator.createNormalProperty" edges="//@edges.30 //@edges.31 //@edges.32 //@edges.33 //@edges.34 //@edges.35 //@edges.36 //@edges.37">
@@ -51,7 +51,7 @@
   <nodes name="org.spp.cocome.types.generator.TypesGenerator._createDatabaseType" edges="//@edges.70 //@edges.71 //@edges.72 //@edges.73 //@edges.79">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createImport" edges="//@edges.74 //@edges.75 //@edges.76 //@edges.77">
+  <nodes name="org.spp.cocome.types.generator.TypesGenerator.createImport" edges="//@edges.12 //@edges.74 //@edges.75 //@edges.76 //@edges.77">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
   <nodes name="org.spp.cocome.types.generator.TypesGenerator.createJavaType" edges="//@edges.22 //@edges.35 //@edges.42 //@edges.64 //@edges.78">
@@ -69,22 +69,16 @@
   <nodes name="com.google.common.collect.Iterators.filter" edges="//@edges.1">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.Procedure1&lt;EntityType>$Lorg/spp/cocome/types/generator/TypesGenerator$2556;..Procedure1&lt;EntityType>" edges="//@edges.2">
+  <nodes name="org.eclipse.xtext.generator.IFileSystemAccess.generateFile" edges="//@edges.4">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.Procedure1&lt;EntityType>$Lorg/spp/cocome/types/generator/TypesGenerator$2556;.apply">
+  <nodes name="org.eclipse.xtext.xbase.lib.IteratorExtensions.forEach" edges="//@edges.5">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.eclipse.xtext.xbase.lib.IteratorExtensions.forEach" edges="//@edges.3">
+  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation" edges="//@edges.6 //@edges.20 //@edges.31 //@edges.38 //@edges.46 //@edges.53 //@edges.57 //@edges.60 //@edges.63 //@edges.67 //@edges.70 //@edges.74">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.eclipse.emf.ecore.EObject.eContainer" edges="//@edges.4 //@edges.7">
-    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
-  </nodes>
-  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation" edges="//@edges.5 //@edges.20 //@edges.31 //@edges.38 //@edges.46 //@edges.53 //@edges.57 //@edges.60 //@edges.63 //@edges.67 //@edges.70 //@edges.74">
-    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
-  </nodes>
-  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.append" edges="//@edges.6 //@edges.21 //@edges.32 //@edges.39 //@edges.47 //@edges.54 //@edges.61 //@edges.66 //@edges.68 //@edges.73 //@edges.75">
+  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.append" edges="//@edges.7 //@edges.21 //@edges.32 //@edges.39 //@edges.47 //@edges.54 //@edges.61 //@edges.66 //@edges.68 //@edges.73 //@edges.75">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
   <nodes name="org.eclipse.xtend2.lib.StringConcatenation.append" edges="//@edges.8 //@edges.23 //@edges.34 //@edges.41 //@edges.49 //@edges.55 //@edges.58 //@edges.65 //@edges.69 //@edges.72 //@edges.76">
@@ -96,12 +90,6 @@
   <nodes name="org.eclipse.xtend2.lib.StringConcatenation.newLine" edges="//@edges.10 //@edges.26 //@edges.52">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Import,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$4210;..Function1&lt;Import,CharSequence>" edges="//@edges.12">
-    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
-  </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Import,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$4210;.apply">
-    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
-  </nodes>
   <nodes name="org.eclipse.xtext.xbase.lib.ListExtensions.map" edges="//@edges.13">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
@@ -111,19 +99,7 @@
   <nodes name="com.google.common.base.Objects.equal" edges="//@edges.16 //@edges.27 //@edges.33 //@edges.40 //@edges.45">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Property,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$5520;..Function1&lt;Property,CharSequence>" edges="//@edges.17">
-    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
-  </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Property,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$5520;.apply">
-    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
-  </nodes>
   <nodes name="org.eclipse.xtext.xbase.lib.ListExtensions.map" edges="//@edges.18">
-    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
-  </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Property,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$6195;..Function1&lt;Property,CharSequence>" edges="//@edges.19">
-    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
-  </nodes>
-  <nodes name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Property,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$6195;.apply">
     <derivedFrom xsi:type="hypergraph:MethodTrace"/>
   </nodes>
   <nodes name="org.eclipse.xtext.xbase.lib.StringExtensions.toFirstUpper" edges="//@edges.24">
@@ -138,22 +114,22 @@
   <edges name="org.spp.cocome.types.generator.TypesGenerator.doGenerate::com.google.common.collect.Iterators.filter">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
-  <edges name="org.spp.cocome.types.generator.TypesGenerator.doGenerate::org.spp.cocome.types.generator.TypesGenerator.Procedure1&lt;EntityType>$Lorg/spp/cocome/types/generator/TypesGenerator$2556;..Procedure1&lt;EntityType>">
+  <edges name="org.spp.cocome.types.generator.TypesGenerator.doGenerate::org.spp.cocome.types.generator.TypesGenerator.createFileName">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.types.generator.TypesGenerator.doGenerate::org.spp.cocome.types.generator.TypesGenerator.createEntity">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.types.generator.TypesGenerator.doGenerate::org.eclipse.xtext.generator.IFileSystemAccess.generateFile">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
   <edges name="org.spp.cocome.types.generator.TypesGenerator.doGenerate::org.eclipse.xtext.xbase.lib.IteratorExtensions.forEach">
-    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
-  </edges>
-  <edges name="org.spp.cocome.types.generator.TypesGenerator.createFileName::org.eclipse.emf.ecore.EObject.eContainer">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
   <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
   <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.eclipse.xtend2.lib.StringConcatenation.append">
-    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
-  </edges>
-  <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.eclipse.emf.ecore.EObject.eContainer">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
   <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.eclipse.xtend2.lib.StringConcatenation.append">
@@ -168,7 +144,7 @@
   <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.spp.cocome.types.generator.TypesGenerator.createImports">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
-  <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Import,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$4210;..Function1&lt;Import,CharSequence>">
+  <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.spp.cocome.types.generator.TypesGenerator.createImport">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
   <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.eclipse.xtext.xbase.lib.ListExtensions.map">
@@ -183,13 +159,13 @@
   <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::com.google.common.base.Objects.equal">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
-  <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Property,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$5520;..Function1&lt;Property,CharSequence>">
+  <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.spp.cocome.types.generator.TypesGenerator.createProperty">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
   <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.eclipse.xtext.xbase.lib.ListExtensions.map">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
-  <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Property,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$6195;..Function1&lt;Property,CharSequence>">
+  <edges name="org.spp.cocome.types.generator.TypesGenerator.createEntity::org.spp.cocome.types.generator.TypesGenerator.createGettersAndSetters">
     <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
   </edges>
   <edges name="org.spp.cocome.types.generator.TypesGenerator.createGettersAndSetters::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
@@ -384,37 +360,25 @@
   <modules name="com.google.common.collect.Iterators" nodes="//@nodes.22" kind="FRAMEWORK">
     <derivedFrom xsi:type="hypergraph:TypeTrace"/>
   </modules>
-  <modules name="org.spp.cocome.types.generator.TypesGenerator.Procedure1&lt;EntityType>$Lorg/spp/cocome/types/generator/TypesGenerator$2556;" nodes="//@nodes.23 //@nodes.24" kind="ANONYMOUS">
+  <modules name="org.eclipse.xtext.generator.IFileSystemAccess" nodes="//@nodes.23" kind="FRAMEWORK">
     <derivedFrom xsi:type="hypergraph:TypeTrace"/>
   </modules>
-  <modules name="org.eclipse.xtext.xbase.lib.IteratorExtensions" nodes="//@nodes.25" kind="FRAMEWORK">
+  <modules name="org.eclipse.xtext.xbase.lib.IteratorExtensions" nodes="//@nodes.24" kind="FRAMEWORK">
     <derivedFrom xsi:type="hypergraph:TypeTrace"/>
   </modules>
-  <modules name="org.eclipse.emf.ecore.EObject" nodes="//@nodes.26" kind="FRAMEWORK">
+  <modules name="org.eclipse.xtend2.lib.StringConcatenation" nodes="//@nodes.25 //@nodes.26 //@nodes.27 //@nodes.28 //@nodes.29 //@nodes.35" kind="FRAMEWORK">
     <derivedFrom xsi:type="hypergraph:TypeTrace"/>
   </modules>
-  <modules name="org.eclipse.xtend2.lib.StringConcatenation" nodes="//@nodes.27 //@nodes.28 //@nodes.29 //@nodes.30 //@nodes.31 //@nodes.43" kind="FRAMEWORK">
+  <modules name="org.eclipse.xtext.xbase.lib.ListExtensions" nodes="//@nodes.30 //@nodes.33" kind="FRAMEWORK">
     <derivedFrom xsi:type="hypergraph:TypeTrace"/>
   </modules>
-  <modules name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Import,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$4210;" nodes="//@nodes.32 //@nodes.33" kind="ANONYMOUS">
+  <modules name="org.eclipse.xtext.xbase.lib.IterableExtensions" nodes="//@nodes.31" kind="FRAMEWORK">
     <derivedFrom xsi:type="hypergraph:TypeTrace"/>
   </modules>
-  <modules name="org.eclipse.xtext.xbase.lib.ListExtensions" nodes="//@nodes.34 //@nodes.39" kind="FRAMEWORK">
+  <modules name="com.google.common.base.Objects" nodes="//@nodes.32" kind="FRAMEWORK">
     <derivedFrom xsi:type="hypergraph:TypeTrace"/>
   </modules>
-  <modules name="org.eclipse.xtext.xbase.lib.IterableExtensions" nodes="//@nodes.35" kind="FRAMEWORK">
-    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
-  </modules>
-  <modules name="com.google.common.base.Objects" nodes="//@nodes.36" kind="FRAMEWORK">
-    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
-  </modules>
-  <modules name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Property,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$5520;" nodes="//@nodes.37 //@nodes.38" kind="ANONYMOUS">
-    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
-  </modules>
-  <modules name="org.spp.cocome.types.generator.TypesGenerator.Function1&lt;Property,CharSequence>$Lorg/spp/cocome/types/generator/TypesGenerator$6195;" nodes="//@nodes.40 //@nodes.41" kind="ANONYMOUS">
-    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
-  </modules>
-  <modules name="org.eclipse.xtext.xbase.lib.StringExtensions" nodes="//@nodes.42" kind="FRAMEWORK">
+  <modules name="org.eclipse.xtext.xbase.lib.StringExtensions" nodes="//@nodes.34" kind="FRAMEWORK">
     <derivedFrom xsi:type="hypergraph:TypeTrace"/>
   </modules>
 </hypergraph:ModularHypergraph>
