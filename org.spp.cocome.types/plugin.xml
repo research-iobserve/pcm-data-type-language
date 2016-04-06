@@ -7,7 +7,7 @@
     <package 
        uri = "http://www.spp.org/cocome/types/Types" 
        class = "org.spp.cocome.types.types.TypesPackage"
-       genModel = "org/spp/cocome/types/Types.genmodel" /> 
+       genModel = "src-gen/org/spp/cocome/types/Types.genmodel" /> 
 	
   </extension>
 
